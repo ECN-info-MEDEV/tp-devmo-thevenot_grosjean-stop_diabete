@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Paramètres">
+
+        <EditTextPreference
+            app:key="numero"
+            app:title="Mes numéros d'urgence"
+            app:defaultValue="Régler l'ordre d'appel"
+            app:useSimpleSummaryProvider="true"
+            app:enabled="false"/>
+
+        <EditTextPreference
+            app:key="medecin"
+            app:title="Changer de médecin traitant"
+            app:defaultValue="Votre médecin : Dr. Mounier"
+            app:useSimpleSummaryProvider="true"
+            app:enabled="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Préférences">
+
+        <SwitchPreferenceCompat
+            app:key="alarmes"
+            app:title="Faire sonner les alarmes"
+            app:summaryOff="Les alarmes affichent un rappel (Off)"
+            app:summaryOn="Les alarmes sonnent (On)"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

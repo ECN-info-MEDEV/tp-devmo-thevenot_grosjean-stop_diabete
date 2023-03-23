@@ -1,0 +1,53 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccueilActivity">
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/rectangle"/>
+
+    <ImageButton
+        android:id="@+id/accueilMenu"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:paddingLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/myRectangleView"
+        app:layout_constraintTop_toTopOf="@+id/myRectangleView"
+        app:layout_constraintBottom_toBottomOf="@+id/myRectangleView"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/cercle"
+        app:layout_constraintTop_toTopOf="@+id/settingsThreeDots"
+        app:layout_constraintLeft_toLeftOf="@id/settingsThreeDots"
+        android:layout_marginLeft="14dp"
+        />
+
+    <ImageButton
+        android:id="@+id/settingsThreeDots"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:paddingLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/threedots_icon"
+        app:layout_constraintRight_toRightOf="@+id/myRectangleView"
+        app:layout_constraintTop_toTopOf="@+id/myRectangleView"
+        app:layout_constraintBottom_toBottomOf="@+id/myRectangleView"/>
+
+
+    <FrameLayout
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/myRectangleView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

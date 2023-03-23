@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccueilActivity">
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/rectangle"/>
+
+    <ImageButton
+        android:id="@+id/accueilMenu"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:paddingLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/myRectangleView"
+        app:layout_constraintTop_toTopOf="@+id/myRectangleView"
+        app:layout_constraintBottom_toBottomOf="@+id/myRectangleView"/>
+
+    <ImageButton
+        android:id="@+id/accueilThreeDots"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:paddingLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/threedots_icon"
+        app:layout_constraintRight_toRightOf="@+id/myRectangleView"
+        app:layout_constraintTop_toTopOf="@+id/myRectangleView"
+        app:layout_constraintBottom_toBottomOf="@+id/myRectangleView"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myRectangleView"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/taux_glucose"
+                android:background="@drawable/accueil_element_border"/>
+
+            <ImageButton
+                android:id="@+id/mesAlertes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/alertes"
+                android:background="@drawable/accueil_element_border"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/activites"
+                android:background="@drawable/accueil_element_border"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/emergency"
+                android:background="@drawable/accueil_element_border"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
